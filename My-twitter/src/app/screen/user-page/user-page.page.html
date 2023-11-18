@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons slot="secondary">
+      <ion-button routerLink="/tweets">
+        <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/search-page">
+        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/profile-page">
+        <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-img src="../assets/icon/icono.png"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <img class="imgA" src="https://via.placeholder.com/150" alt="Avatar" />
+    <ion-card-header>
+      <ion-card-title>@username
+        <ion-button  color="primary" (click)="toggleFollow()">
+          <ion-label>{{followText}}</ion-label>
+        </ion-button>
+      </ion-card-title>
+    </ion-card-header>
+
+
+    <ion-card-content>
+      <div class="counts">
+        <p><strong>Seguidores:</strong> 123</p>
+        <p><strong>Seguidos:</strong> 456</p>
+      </div>
+      <div class="bio">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque.</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <p>Publicaciones:</p>
+
+  <ion-grid *ngFor="let i of [0,1,2,3,4]">
+    <ion-row class="tweet-info">
+      <ion-col size="2">
+        <ion-avatar>
+          <img src="https://via.placeholder.com/150" alt="Avatar" />
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="10">
+        <ion-row>
+          <ion-col>
+            <h2>@username</h2>
+          </ion-col>
+        </ion-row>
+        <p class="tweet-content">Contenido del tweet {{i + 1}} </p>
+        <ion-row class="icon-container">
+          <ion-col class="icon-left">
+            <ion-icon name="heart-outline" ></ion-icon><span class="likes">10</span>
+          </ion-col>
+          <ion-col class="icon-right">
+            <ion-icon name="chatbubble-outline" routerLink="/comments"></ion-icon><span class="comments">2</span>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

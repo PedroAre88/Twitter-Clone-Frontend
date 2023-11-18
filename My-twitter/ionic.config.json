@@ -1,0 +1,7 @@
+{
+  "name": "My-twitter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

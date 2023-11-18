@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button routerLink="/tweets">
+        <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/search-page">
+        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/profile-page">
+        <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-img src="../assets/icon/icono.png"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Comenta aqui</ion-label>
+    <ion-input type="text" name="content" ></ion-input>
+    <ion-button slot="end" color="primary" (click)="saveComment()">
+      <ion-icon name="save-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+    <p>COMENTARIOS</p>
+  <app-comment-grid></app-comment-grid>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="saveComment()">
+      <ion-icon name="save-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

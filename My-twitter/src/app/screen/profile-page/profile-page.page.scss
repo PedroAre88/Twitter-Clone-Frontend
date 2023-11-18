@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  ion-header {
+    background-color: #f8f9fa;
+  }
+  
+  ion-toolbar {
+    background-color: #f8f9fa;
+  }
+  ion-img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  ion-title {
+    color: #343a40;
+  }
+  
+  ion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+ .imgA {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  ion-card-header {
+    // background-color: #343a40;
+    color: #fff;
+  }
+  
+  ion-card-content {
+    color: #6c757d;
+  }
+  
+  ion-button {
+    margin: 10px;
+    border-radius: 15px;
+  }
+  
+  ion-button[color="danger"] {
+    color: #fff;
+    background-color: #dc3545;
+  }
+  
+  ion-tab-bar {
+    background-color: #f8f9fa;
+  }
+  
+  ion-tab-button {
+    color: #6c757d;
+  }
+  
+  .counts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .bio {
+    position: relative;
+    border: 1px solid #6c757d;
+    padding: 20px; /* Increase padding */
+    margin-top: 10px;
+    height: 200px; /* Increase height */
+  }
+  
+  .bio ion-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+// css de los tweets
+
+.tweet-content {
+  font-size: 1.2em;
+}
+
+.tweet-info {
+  border: 1px solid #3880ff;
+  border-radius: 15px;
+}
+ion-avatar {
+  width: 50px;
+  height: 50px;
+}

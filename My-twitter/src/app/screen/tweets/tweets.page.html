@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button routerLink="/tweets">
+        <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/search-page">
+        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/profile-page">
+        <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-img src="../assets/icon/icono.png"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <ion-buttons class="ion-align-self-end" >
+    <ion-button (click)="showFilterOptions()" class="filter-button">
+      <ion-icon slot="icon-only" name="filter"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <app-tweet-grid *ngFor="let i of [0,1,2,3,4,5,6,7]"></app-tweet-grid>
+
+  
+  <app-app-tabs></app-app-tabs>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top" routerLink="/create-tweet">
+      <ion-fab-button>
+        <ion-icon name="pencil-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="image-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
