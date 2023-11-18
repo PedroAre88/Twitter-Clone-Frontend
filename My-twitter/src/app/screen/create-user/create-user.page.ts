@@ -24,7 +24,7 @@ export class CreateUserPage implements OnInit {
       bio: this.bio
     };
 
-    fetch('http://localhost:3000/register', {
+    fetch('http://localhost:3000/users/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

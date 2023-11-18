@@ -19,23 +19,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Perfil</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <ion-card>
     <img class="imgA" src="https://via.placeholder.com/150" alt="Avatar"/>
     <ion-card-header>
-      <ion-card-title>@username</ion-card-title>
+      <ion-card-title>@{{username}}</ion-card-title>
     </ion-card-header>
-
-    
+  
     <ion-card-content>
       <div class="counts">
-        <p><strong>Seguidores:</strong> 123</p>
-        <p><strong>Seguidos:</strong> 456</p>
+        <p><strong>Seguidores:</strong> {{followersCount}}</p>
+        <p><strong>Seguidos:</strong> {{followingCount}}</p>
       </div>
       <div class="bio">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque.</p>
